@@ -1,56 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me - My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css"> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - My Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #fdf6e3, #f5e6c8);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #222;
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #f4b400;
+      color: #111;
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      padding: 30px 15px;
+    }
+
+    #about {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 25px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 18px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    #about h1 {
+      font-size: 38px;
+      margin-bottom: 25px;
+      color: #2c2c2c;
+    }
+
+    #about p {
+      font-size: 18px;
+      line-height: 1.9;
+      word-break: normal;
+    }
+
+    .bounce {
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      background: #222;
+      color: white;
+      padding: 15px 10px;
+      font-size: 15px;
+      margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        gap: 8px;
+        padding: 12px;
+      }
+
+      nav ul li a {
+        font-size: 15px;
+        display: block;
+      }
+
+      main {
+        padding: 20px 12px;
+      }
+
+      #about {
+        padding: 22px 15px;
+        border-radius: 14px;
+      }
+
+      #about h1 {
+        font-size: 30px;
+      }
+
+      #about p {
+        font-size: 15px;
+        line-height: 1.8;
+      }
+    }
+
+    @media (max-width: 480px) {
+      #about h1 {
+        font-size: 26px;
+      }
+
+      #about p {
+        font-size: 14px;
+        line-height: 1.75;
+      }
+
+      footer {
+        font-size: 13px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="experience.html">Experience & Certificates</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="activities.html">Extra-Curricular Activities</a></li>
-            </ul>
-        </nav>
-    </header>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="experience.html">Experience & Certificates</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="activities.html">Extra-Curricular Activities</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <section id="about">
-        <h1 class="bounce">About Me</h1>
-        <p>
-    I am Basit Zahoor, from Jammu and Kashmir's embrace,<br>
-    With a passion for tech and a drive to chase.<br>
-    From Dr. AIT Bangalore, I earned my degree,<br>
-    A BE in Computer Science, a journey to see.<br><br>
+      <h1 class="bounce">About Me</h1>
 
-    A CGPA of 8.15 stands tall and bright,<br>
-    Reflecting my dedication and learning might.<br>
-    Hardworking and focused, I strive each day,<br>
-    Solving problems in an efficient way.<br><br>
+      <p>
+        I am Basit Zahoor, from Jammu and Kashmir's embrace,<br>
+        With a passion for tech and a drive to chase.<br>
+        From Dr. AIT Bangalore, I earned my degree,<br>
+        A BE in Computer Science, a journey to see.<br><br>
 
-    A team player at heart, I collaborate with ease,<br>
-    Adapting to challenges, eager to seize.<br>
-    Writing clean code, optimizing with care,<br>
-    Bringing ideas to life with a vision rare.<br><br>
+        A CGPA of 8.15 stands tall and bright,<br>
+        Reflecting my dedication and learning might.<br>
+        Hardworking and focused, I strive each day,<br>
+        Solving problems in an efficient way.<br><br>
 
-    Passionate about learning, always ready to grow,<br>
-    Innovation and creativity in every code I show.<br>
-    With commitment and skill, I stand strong,<br>
-    Ready to contribute and move tech along.<br><br>
+        A team player at heart, I collaborate with ease,<br>
+        Adapting to challenges, eager to seize.<br>
+        Writing clean code, optimizing with care,<br>
+        Bringing ideas to life with a vision rare.<br><br>
 
-    If you're looking for talent, driven and true,<br>
-    A problem-solver who sees things through,<br>
-    I'm here to build, to create, to inspire,<br>
-    With dedication and passion that never tires.<br>
-    </p>
+        Passionate about learning, always ready to grow,<br>
+        Innovation and creativity in every code I show.<br>
+        With commitment and skill, I stand strong,<br>
+        Ready to contribute and move tech along.<br><br>
 
+        If you're looking for talent, driven and true,<br>
+        A problem-solver who sees things through,<br>
+        I'm here to build, to create, to inspire,<br>
+        With dedication and passion that never tires.
+      </p>
     </section>
-    <footer>
-        <p>&copy; 2024 Basit Zahoor</p>
-    </footer>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Basit Zahoor</p>
+  </footer>
+
 </body>
 </html>
